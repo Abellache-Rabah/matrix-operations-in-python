@@ -4,14 +4,14 @@ import inquirer
 
 Rows = int(input("Give the number of rows:"))  
 Columns = int(input("Give the number of columns:"))  
-  
+print("--------------------------------------------")
  # matrix 1
 print("First matrix (separated by a space): ")  
 elements = list(map(int, input().split()))  
 matrixx = np.array(elements).reshape(Rows, Columns)  
 print("Matrix 1 :\n" , matrixx)
 
-
+print("--------------------------------------------")
 
 # matrix 2
 print("seacond matrix (separated by a space): ")  
@@ -25,18 +25,8 @@ questions = [
                 choices=['+', '-', '*', '/'],
             ),
 ]
-
+print("--------------------------------------------")
 answers = inquirer.prompt(questions)
-
-if answers["op"]== '+':
-	print(matrixx + matrixx2)
-elif answers["op"]== '-':
-	print(matrixx - matrixx2)
-elif answers["op"]== '*':
-	print(matrixx * matrixx2)
-else :
-	print(matrixx / matrixx2)
-	
 
 while True:
 	questions = [
@@ -49,12 +39,16 @@ while True:
 	answers = inquirer.prompt(questions)
 
 	if answers["op"]== '+':
+		print("--------------------------------------------")
 		print('matrix1 + matrix2 : \n',matrixx + matrixx2)
 	elif answers["op"]== '-':
+		print("--------------------------------------------")
 		print('matrix1 - matrix2 : \n',matrixx - matrixx2)
 	elif answers["op"]== '*':
+		print("--------------------------------------------")
 		print('matrix1 * matrix2 : \n',matrixx * matrixx2)
 	else :
+		print("--------------------------------------------")
 		print('matrix1 / matrix2 : \n',matrixx / matrixx2)
 
 
